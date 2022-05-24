@@ -9,8 +9,8 @@ looker.plugins.visualizations.add({
       type: "string",
       label: "Font Size",
       values: [
-        {"Larger": "larger"},
-        {"Smaller": "smaller"}
+        {"Large": "large"},
+        {"Small": "small"}
       ],
       display: "radio",
       default: "large"
@@ -30,10 +30,10 @@ looker.plugins.visualizations.add({
           justify-content: center;
           text-align: center;
         }
-        .hello-world-text-larger {
+        .hello-world-text-large {
           font-size: 72px;
         }
-        .hello-world-text-smaller {
+        .hello-world-text-small {
           font-size: 18px;
         }
       </style>
@@ -67,10 +67,10 @@ looker.plugins.visualizations.add({
     this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     // Set the size to the user-selected size
-    if (config.font_size == "smaller") {
-      this._textElement.className = "hello-world-text-smaller";
+    if (config.font_size == "small") {
+      this._textElement.className = "hello-world-text-small";
     } else {
-      this._textElement.className = "hello-world-text-larger";
+      this._textElement.className = "hello-world-text-large";
     }
 
     // We are done rendering! Let Looker know.
